@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navvratech Services Pvt. Ltd.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Added Google Font for better aesthetics -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif; /* Changed to Roboto for a modern look */
+            margin: 0;
+            padding: 0;
+            background: #F8FAFC; /* Off white background */
+            color: #0F172A; /* Deep Navy for primary text */
+            line-height: 1.6;
+            text-align: center; /* Centered all text for symmetry */
+        }
+        .title-header {
+            background: #0F172A; /* Deep Navy for headers */
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .logo {
+            max-width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-in;
+        }
+        .title-header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            font-weight: 700;
+            animation: fadeIn 2s ease-in;
+        }
+        nav {
+            background-color: #0F172A; /* Deep Navy for navbar */
+            padding: 10px 0;
+            border-bottom: 2px solid #14B8A6; /* Teal accent */
+            text-align: center;
+        }
+        nav a {
+            color: #14B8A6; /* Teal for nav links */
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #14B8A6;
+            color: #0F172A; /* Deep Navy on hover */
+            transform: scale(1.05);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 50px;
+            padding: 30px;
+            border-radius: 12px;
+            background-color: #FFFFFF; /* White for cards/sections */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            animation: slideUp 1s ease-out;
+            backdrop-filter: blur(5px); /* Subtle blur for modern look */
+        }
+        h2 {
+            color: #0F172A; /* Deep Navy for section headings */
+            border-bottom: 3px solid #14B8A6; /* Teal accent */
+            padding-bottom: 15px;
+            font-weight: 700;
+            text-align: center;
+        }
+        h3 {
+            color: #0F172A; /* Deep Navy for subheadings */
+            text-align: center; /* Centered subheadings */
+        }
+        .hero {
+            text-align: center;
+            background: #F8FAFC; /* Off white for hero */
+            padding: 50px 20px;
+            border-radius: 12px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            max-width: 900px;
+            margin: 0 auto;
+            font-weight: 300;
+            color: #475569; /* Secondary text color */
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .service {
+            padding: 25px;
+            background-color: #FFFFFF; /* White for service cards */
+            border: 2px solid #14B8A6; /* Teal borders */
+            border-radius: 12px;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(20,184,166,0.3); /* Teal shadow */
+        }
+        .service h3 {
+            color: #0F172A; /* Deep Navy for service headings */
+            margin-bottom: 10px;
+        }
+        .service p {
+            color: #475569; /* Secondary text color */
+        }
+        .slideshow {
+            position: relative;
+            max-width: 100%;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin: 0 auto; /* Ensure centered */
+        }
+        .slides {
+            display: flex;
+            width: 300%;
+            animation: slide 15s infinite;
+        }
+        .slide {
+            width: 33.33%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+        .slide1 { background-image: url('slide1.jpg'); }
+        .slide2 { background-image: url('slide2.jpg'); }
+        .slide3 { background-image: url('slide6.jpg'); }
+        .slide4 { background-image: url('slide4.jpg'); }
+        .slide5 { background-image: url('slide5.jpg'); }
+        .slide6 { background-image: url('slide3.jpg'); }
+        .certifications {
+            text-align: center;
+        }
+        .certifications img {
+            max-width: 300px;
+            height: auto;
+            border: 2px solid #14B8A6; /* Teal border */
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .contact {
+            text-align: center;
+        }
+        .contact p {
+            font-size: 1.1em;
+            margin: 10px 0;
+            color: #475569; /* Secondary text color */
+        }
+        ul {
+            text-align: left; /* Override for lists to keep them readable */
+            display: inline-block; /* Center the list block */
+            margin: 0 auto;
+            color: #475569; /* Secondary text color */
+        }
+        footer {
+            background: #0F172A; /* Deep Navy for footer */
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-weight: 300;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            33% { transform: translateX(-33.33%); }
+            66% { transform: translateX(-66.66%); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="title-header">
+        <img src="Navvra Logo.png" alt="Navvratech Services Pvt. Ltd. Logo" class="logo">
+        <h1>Navvratech Services Pvt. Ltd.</h1>
+    </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <h2>Welcome to Navvratech</h2>
+        <p>Navvratech Services Pvt. Ltd. is a professional technical and infrastructure services company specializing in modification works, electrical services, and manpower solutions. The company primarily focuses on improving existing systems and equipment to reduce damage, lower maintenance costs, and increase operational efficiency instead of complete replacement.</p>
+        <p>Navvratech works extensively in the Railway sector by providing safety-based modifications, supportive equipment installation, and practical technical improvements. In addition, the company also serves government and private sector projects through electrical works, maintenance support, and deployment of skilled and unskilled manpower.</p>
+        <p>A key objective of the company is employment generation, creating opportunities for skilled, semi-skilled, and unskilled individuals. Navvratech follows an approach of “improve rather than replace,” delivering cost-effective and sustainable solutions with long-term performance benefits.</p>
+    </section>
+
+    <div class="container">
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Modification Works</h3>
+                    <p>Enhancing existing systems for better performance and longevity, including electric and mechanical modifications.</p>
+                </div>
+                <div class="service">
+                    <h3>Electrical Services</h3>
+                    <p>Comprehensive electrical installations, maintenance, and engineering works.</p>
+                </div>
+                <div class="service">
+                    <h3>Manpower Solutions</h3>
+                    <p>Deployment of skilled and unskilled workforce for various projects, including manpower work.</p>
+                </div>
+                <div class="service">
+                    <h3>Annual Maintenance Contracts (AMC)</h3>
+                    <p>We offer Annual Maintenance Contracts to ensure ongoing support and reliability for your systems.</p>
+                </div>
+                <div class="service">
+                    <h3>Engineering Works</h3>
+                    <p>Specialized engineering services to meet diverse project needs.</p>
+                </div>
+                <div class="service">
+                    <h3>Construction Works</h3>
+                    <p>Comprehensive construction services for infrastructure development.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <p>Our work in the Indian Railways sector showcases our commitment to safety and efficiency.</p>
+            <div class="slideshow">
+                <div class="slides">
+                    <div class="slide slide1"></div>
+                    <div class="slide slide2"></div>
+                    <div class="slide slide3"></div>
+                    <div class="slide slide4"></div>
+                    <div class="slide slide5"></div>
+                    <div class="slide slide6"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Founded with a vision to innovate in infrastructure services, Navvratech is led by experienced professionals.</p>
+            <h3>Directors</h3>
+            <ul>
+                <li>Director 1: Mr. Yash Kaushal</li>
+                <li>Director 2: Mr. Shashi Shekhar</li>
+            </ul>
+            <div class="certifications">
+                <h3>Incorporation Certificate</h3>
+                <img src="INC CERT NAVVRA.png" alt="Incorporation Certificate Placeholder">
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:navvratechservicespvtltd@gmail.com">navvratechservicespvtltd@gmail.com</p></a>
+            <p>Phone: <a href="tel:+919354936219">+91 9354936219</a> | <a href="tel:+917011796438">+91 7011796438</p></a>
+            <p>Address: 2nd Floor, KH No. 63/2, Street No. 6, Mukand Vihar Village, Phase 1, Mukundpur, North West Delhi, New Delhi, Pin - 110042</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Navvratech Services Pvt. Ltd. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple scroll animation trigger
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 1s, transform 1s';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
