@@ -145,6 +145,12 @@
         .slide5 { background-image: url('slide5.jpg'); }
         .slide6 { background-image: url('slide3.jpg'); }
         .certifications {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .cert-item {
             text-align: center;
         }
         .certifications img {
@@ -266,10 +272,14 @@
                 <li>Director 2: Mr. Shashi Shekhar</li>
             </ul>
             <div class="certifications">
-                <h3>Incorporation Certificate</h3>
-                <img src="INC CERT NAVVRA.png" alt="Incorporation Certificate Placeholder">
-                <h3>Certificate of Recognition</h3>
-                <img src="CERT OF REC NAVVRA.png" alt="Certificate of Recognition Placeholder">
+                <div class="cert-item">
+                    <h3>Incorporation Certificate</h3>
+                    <img src="INC CERT NAVVRA.png" alt="Incorporation Certificate Placeholder">
+                </div>
+                <div class="cert-item">
+                    <h3>Certificate of Recognition</h3>
+                    <img src="REC CERT NAVVRA.png" alt="Certificate of Recognition Placeholder">
+                </div>
             </div>
         </section>
 
